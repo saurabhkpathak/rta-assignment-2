@@ -1,0 +1,4 @@
+﻿  main2.cpp
+\\tholos.itserv.scss.tcd.ie\pgrad\pathaks\desktop\rta-assignment-2\rta-assignment-2\main2.cpp(36): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+  rta-assignment-2.vcxproj -> \\tholos.itserv.scss.tcd.ie\Pgrad\pathaks\Desktop\rta-assignment-2\Debug\rta-assignment-2.exe
+  rta-assignment-2.vcxproj -> \\tholos.itserv.scss.tcd.ie\Pgrad\pathaks\Desktop\rta-assignment-2\Debug\rta-assignment-2.pdb (Full PDB)
