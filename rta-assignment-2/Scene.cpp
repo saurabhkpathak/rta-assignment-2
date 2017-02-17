@@ -172,12 +172,12 @@ void Scene::draw(){
 	drawAxes(4);
     drawPlane();
     Skeleton geo;
-	Bone bone = geo.getBone();
+	//Bone bone = geo.getBone();
 	/* YOUR CODE HERE*/
     geo.drawLamp(arm1Angle,arm2Angle,arm3Angle);
     glPushMatrix();
 	glTranslatef(3,1,3);
-	bone.box(2,2,2);
+	//bone.box(2,2,2);
     glPopMatrix();
 	glutSwapBuffers();
 
