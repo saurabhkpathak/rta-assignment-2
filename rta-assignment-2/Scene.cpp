@@ -1,5 +1,4 @@
 #include "headers\Scene.h"
-#include "headers\Geometry.h"
 
 #include "headers\Skeleton.h"
 #include <stdlib.h>

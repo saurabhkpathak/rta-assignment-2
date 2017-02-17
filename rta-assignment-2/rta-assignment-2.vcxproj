@@ -149,7 +149,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bone.cpp" />
-    <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="main2.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -157,7 +156,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\Bone.h" />
-    <ClInclude Include="headers\Geometry.h" />
     <ClInclude Include="headers\Scene.h" />
     <ClInclude Include="headers\Skeleton.h" />
     <ClInclude Include="headers\vector3.h" />

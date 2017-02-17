@@ -3,7 +3,6 @@
 #include <math.h>
 
 #include "headers\vector3.h"
-#include "headers\Geometry.h"
 #include "headers\Scene.h"
 
 int main(int argc, char** argv) 
