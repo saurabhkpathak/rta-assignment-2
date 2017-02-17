@@ -1,5 +1,7 @@
-#include <GL\Scene.h>
-#include <GL\Geometry.h>
+#include "headers\Scene.h"
+#include "headers\Geometry.h"
+
+#include "headers\Skeleton.h"
 #include <stdlib.h>
 
 
@@ -170,12 +172,13 @@ void Scene::draw(){
 	
 	drawAxes(4);
     drawPlane();
-    Geometry geo;
+    Skeleton geo;
+	Bone bone = geo.getBone();
 	/* YOUR CODE HERE*/
     geo.drawLamp(arm1Angle,arm2Angle,arm3Angle);
     glPushMatrix();
 	glTranslatef(3,1,3);
-	geo.box(2,2,2);
+	bone.box(2,2,2);
     glPopMatrix();
 	glutSwapBuffers();
 

@@ -1,9 +1,10 @@
 #include <iostream>
 #include <gl/glut.h>
 #include <math.h>
-#include <GL\vector3.h>
-#include <GL\Geometry.h>
-#include <GL\Scene.h>
+
+#include "headers\vector3.h"
+#include "headers\Geometry.h"
+#include "headers\Scene.h"
 
 int main(int argc, char** argv) 
 {
@@ -12,9 +13,9 @@ int main(int argc, char** argv)
 	glutInit(&argc, argv);
 
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(800, 480);
+	glutInitWindowSize(1000, 1200);
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("3D DEMO - http://3dgraphicstutor.blogspot.it/");
+	glutCreateWindow("Hand Hierarchy");
 
 	glutMouseFunc(Scene::mouseClick);
 	glutMotionFunc(Scene::mouseMotion);
