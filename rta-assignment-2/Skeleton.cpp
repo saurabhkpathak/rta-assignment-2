@@ -11,16 +11,16 @@ void Skeleton::drawLamp(int arm1Angle, int arm2Angle, int arm3Angle) {
 
 	Bone geo;
 
-	int colors1[] = { 0,0,255, 0,0,255 };
+	int colors1[] = { 225,184,153, 225,184,153 };
 	//int colors2[]={    255,153,51, 255,153,51, 255,153,51, 
 	//255,153,51, 255,153,51, 255,153,51};
-	int colors3[] = { 255,0,0, 255,0,0, 255,0,0, 255,0,0, 255,0,0, 255,0,0 };
+	int colors3[] = { 225,184,153, 225,184,153, 225,184,153, 225,184,153, 225,184,153, 225,184,153 };
 
 	glPushMatrix();
 
-	float   HEIGHT_CYL_A = 0.05f;//BASE CYLINDER HEIGHT
-	float   HEIGHT_CYL_B = 0.05f;//MIDDLE CYLINDERS HEIGHT
-	float   HEIGHT_CYL_C = 0.05f;//TOP CYLINDER HEIGHT
+	float   HEIGHT_CYL_A = 0.07f;//BASE CYLINDER HEIGHT
+	float   HEIGHT_CYL_B = 0.07f;//MIDDLE CYLINDERS HEIGHT
+	float   HEIGHT_CYL_C = 0.07f;//TOP CYLINDER HEIGHT
 	float   SPHERE_RADIUS = 0.05f;//SPHERE RADIUS
 
 	/* Draw Base Start */

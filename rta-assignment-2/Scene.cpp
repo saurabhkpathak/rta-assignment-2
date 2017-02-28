@@ -87,46 +87,29 @@ void Scene::mouseMotion(int x, int y){
 
 	switch (Movement) 
 	{
-	case ROTATE :  // Left-mouse button is being held down
+	case ROTATE :
 		{
-			curPoint = trackBallMapping( x, y );  // Map the mouse position to a logical sphere location.
+			curPoint = trackBallMapping( x, y );
 			direction = curPoint - lastPoint;
 			double velocity = direction.Length(); 
 			if( velocity > 0.0001 )
 			{
-				// Rotate about the axis that is perpendicular to the great circle connecting the mouse movements.
 				Vector3 rotAxis;
 				rotAxis = lastPoint ^ curPoint ;
 				rotAxis.Normalize();
 				rot_angle = velocity * M_ROTSCALE;
 
-				// We need to apply the rotation as the last transformation.
-				//   1. Get the current matrix and save it.
-				//   2. Set the matrix to the identity matrix (clear it).
-				//   3. Apply the trackball rotation.
-				//   4. Pre-multiply it by the saved matrix.
 				static GLdouble m[4][4];
 				glGetFloatv( GL_MODELVIEW_MATRIX, (GLfloat *) m );
 				glLoadIdentity();
 				glRotated( rot_angle, rotAxis.x, rotAxis.y, rotAxis.z );
 				glMultMatrixf( (GLfloat *) m );
 
-				//  If we want to see it, we need to force the system to redraw the scene.
 				glutPostRedisplay();
 			}
 			break;
 		}
-	case ZOOM :  // Right-mouse button is being held down
-		//
-		// Zoom into or away from the scene based upon how far the mouse moved in the x-direction.
-		//   This implementation does this by scaling the eye-space.
-		//   This should be the first operation performed by the GL_PROJECTION matrix.
-		//   1. Calculate the signed distance
-		//       a. movement to the left is negative (zoom out).
-		//       b. movement to the right is positive (zoom in).
-		//   2. Calculate a scale factor for the scene s = 1 + a*dx
-		//   3. Call glScalef to have the scale be the first transformation.
-		// 
+	case ZOOM :
 		pixel_diff = y - lastPoint.y; 
 		zoom_factor = 1.0 + pixel_diff * M_ZOOMSCALE;
 		glScaled( zoom_factor, zoom_factor, zoom_factor );
